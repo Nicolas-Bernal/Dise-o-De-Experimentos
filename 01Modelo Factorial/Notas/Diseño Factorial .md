@@ -7,7 +7,7 @@ Modelo sobre parametrizado
 Se desea evaluar el rendimiento o respuesta de un proceso industrial influenciado por dos factores: el **Factor T** (con 2 niveles: $T_1, T_2$) y el **Factor B** (con 3 niveles: $B_1, B_2, B_3$).
 Los datos obtenidos en las réplicas experimentales se registran en la siguiente tabla de doble entrada, con un total de $N = 16$ observaciones:
 
-![image.png](image.png)
+![image 7.png](image.png)
 
 1. Plantear el modelo lineal clásico de efectos y su equivalente en forma matricial general ($Y = X\beta + \varepsilon$)
 2. Definir las matrices de diseño parciales ($X_0, X_1, X_2, X_3$) correspondientes a la media general, los efectos principales de los factores y su interacció
