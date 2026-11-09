@@ -61,7 +61,7 @@ $$
 \frac{5}{14}=0,36
 $$
 
-![image.png](MAS%20sin%20remplazo/image.png)
+![image.png](../../../imagenes/image.png)
 
 ### Generar una muestra aleatoria simple sin reemplazo
 
