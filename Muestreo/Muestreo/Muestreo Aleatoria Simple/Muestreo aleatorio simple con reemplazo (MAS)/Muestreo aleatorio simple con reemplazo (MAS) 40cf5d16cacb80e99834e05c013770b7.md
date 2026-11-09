@@ -69,7 +69,7 @@ En Excel, puede usarse **Análisis de datos → Muestra** y especificar el tama�
 sample(x, n, replace = TRUE) # Muestra de tamaño n con reemplazo
 ```
 
-![image.png](Muestreo%20aleatorio%20simple%20con%20reemplazo%20(MAS)/image.png)
+![image.png](../../../imagenes/10001.png)
 
 ## 2. Estimación de la media en un MAS con reemplazo
 
@@ -102,7 +102,7 @@ $$
 Por tanto, $\sigma^2 = \frac{N-1}{N}S^2$. La varianza de la media muestral con reemplazo es:
 
 $$
-\operatorname{Var}(\bar{y}) = \frac{\sigma^2}{n}
+\mathrm{Var}(\bar{y}) = \frac{\sigma^2}{n}
 = \frac{N-1}{N}\frac{S^2}{n}
 $$
 
@@ -111,7 +111,7 @@ La varianza muestral y su uso para estimar la varianza de la media son:
 $$
 s^2 = \frac{1}{n-1}\sum_{j=1}^{n}(y_j-\bar{y})^2,
 \qquad
-\widehat{\operatorname{Var}}(\bar{y}) = \frac{s^2}{n}
+\widehat{\mathrm{Var}}(\bar{y}) = \frac{s^2}{n}
 $$
 
 El error estándar estimado es:
@@ -152,7 +152,7 @@ Condicionalmente a un valor dado de $n_k$, es un estimador insesgado de $\bar{Y}
 Cuando $N_k$ es conocido y $n_k>1$, la varianza estimada condicional es:
 
 $$
-\widehat{\operatorname{Var}}(\bar{y}_k\mid n_k)
+\widehat{\mathrm{Var}}(\bar{y}_k\mid n_k)
 = \frac{N_k-n_k}{N_k n_k}s_k^2,
 \qquad
 s_k^2 = \frac{1}{n_k-1}\sum_{i\in s_k}(y_{ki}-\bar{y}_k)^2
@@ -161,7 +161,7 @@ $$
 Si $N_k$ se desconoce, puede usarse la siguiente **aproximación**, sustituyendo la fracción de muestreo del dominio por la fracción global $n/N$:
 
 $$
-\widehat{\operatorname{Var}}(\bar{y}_k\mid n_k)
+\widehat{\mathrm{Var}}(\bar{y}_k\mid n_k)
 \approx \frac{N-n}{N n_k}s_k^2
 $$
 
@@ -176,8 +176,8 @@ $$
 Su varianza estimada es:
 
 $$
-\widehat{\operatorname{Var}}(\hat{Y}_k)
-= N_k^2\widehat{\operatorname{Var}}(\bar{y}_k)
+\widehat{\mathrm{Var}}(\hat{Y}_k)
+= N_k^2\widehat{\mathrm{Var}}(\bar{y}_k)
 $$
 
 Si $N_k$ se desconoce, se puede estimar el total expandiendo a la población la suma observada en el dominio. Defina $y'_i=y_i$ si la unidad $i$ pertenece al dominio $k$, y $y'_i=0$ en caso contrario. Entonces:
@@ -190,7 +190,7 @@ $$
 La varianza estimada es:
 
 $$
-\widehat{\operatorname{Var}}(\hat{Y}'_k)
+\widehat{\mathrm{Var}}(\hat{Y}'_k)
 = N^2\frac{N-n}{Nn}s'^2,
 \qquad
 s'^2 = \frac{1}{n-1}\sum_{i\in s}(y'_i-\bar{y}')^2
@@ -206,7 +206,7 @@ Se realizó un MAS sin reemplazo de 40 familias de una población de 1,000. Se r
 
 La imagen conserva la información del ejemplo original:
 
-![image.png](Muestreo%20aleatorio%20simple%20con%20reemplazo%20(MAS)/image%201.png)
+![image.png](../../../imagenes/10002.png)
 
 ## 4. Proporciones y totales de atributos en subpoblaciones
 
@@ -225,14 +225,14 @@ Supongamos que se estudia un atributo binario: $y=1$ si la unidad tiene el atrib
 Si $n_k>0$, $p_k$ estima condicionalmente la proporción poblacional $P_k$. Para $N_k$ conocido y $n_k>1$, la varianza estimada es:
 
 $$
-\widehat{\operatorname{Var}}(p_k\mid n_k)
+\widehat{\mathrm{Var}}(p_k\mid n_k)
 = \frac{N_k-n_k}{N_k}\frac{p_kq_k}{n_k-1}
 $$
 
 Cuando $N_k$ es desconocido, puede aproximarse usando la fracción de muestreo global:
 
 $$
-\widehat{\operatorname{Var}}(p_k\mid n_k)
+\widehat{\mathrm{Var}}(p_k\mid n_k)
 \approx \frac{N-n}{N}\frac{p_kq_k}{n_k-1}
 $$
 
@@ -247,8 +247,8 @@ $$
 Su varianza estimada es:
 
 $$
-\widehat{\operatorname{Var}}(\hat{A}_k)
-= N_k^2\widehat{\operatorname{Var}}(p_k)
+\widehat{\mathrm{Var}}(\hat{A}_k)
+= N_k^2\widehat{\mathrm{Var}}(p_k)
 = N_k(N_k-n_k)\frac{p_kq_k}{n_k-1}
 $$
 
@@ -261,7 +261,7 @@ $$
 Defina además $p'_k=a_k/n$ y $q'_k=1-p'_k$. La varianza estimada es:
 
 $$
-\widehat{\operatorname{Var}}(\hat{A}'_k)
+\widehat{\mathrm{Var}}(\hat{A}'_k)
 = N(N-n)\frac{p'_kq'_k}{n-1}
 $$
 
@@ -288,7 +288,7 @@ La suma de los totales estimados es aproximadamente **2,983 personas** con inten
 
 Para ilustrar la incertidumbre, las varianzas estimadas de las proporciones, aplicando la fórmula para $N_k$ conocido, son aproximadamente:
 
-| Dominio | $\widehat{\operatorname{Var}}(p_k)$ | Error estándar estimado $\sqrt{\widehat{\operatorname{Var}}(p_k)}$ |
+| Dominio | $\widehat{\mathrm{Var}}(p_k)$ | Error estándar estimado $\sqrt{\widehat{\mathrm{Var}}(p_k)}$ |
 | --- | --- | --- |
 | Universitario | 0.002729 | 0.0522 |
 | Secundario | 0.002263 | 0.0476 |
@@ -298,13 +298,13 @@ Para ilustrar la incertidumbre, las varianzas estimadas de las proporciones, apl
 
 - **Número de muestras ordenadas con reemplazo:** $N^n$.
 - **Probabilidad de incluir una unidad al menos una vez:** $1-(1-1/N)^n$.
-- **Varianza de la media con reemplazo:** $\operatorname{Var}(\bar{y})=\sigma^2/n$.
+- **Varianza de la media con reemplazo:** $\mathrm{Var}(\bar{y})=\sigma^2/n$.
 - **Error estándar estimado de la media:** $s/\sqrt{n}$.
 - **Media estimada del dominio:** $\bar{y}_k=\sum_{i\in s_k}y_{ki}/n_k$.
 - **Total estimado del dominio si $N_k$ es conocido:** $\hat{Y}_k=N_k\bar{y}_k$.
 - **Proporción estimada del atributo:** $\hat{p}_k=a_k/n_k$.
 - **Total estimado del atributo si $N_k$ es conocido:** $\hat{A}_k=N_k\hat{p}_k$.
 
-![image.png](Muestreo%20aleatorio%20simple%20con%20reemplazo%20(MAS)/image%202.png)
+![image.png](../../../imagenes/10003.png)
 
-![image.png](Muestreo%20aleatorio%20simple%20con%20reemplazo%20(MAS)/image%203.png)
+![image.png](../../../imagenes/10004.png)
