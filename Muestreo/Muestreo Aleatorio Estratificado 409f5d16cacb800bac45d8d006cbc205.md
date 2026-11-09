@@ -1,1 +1,0 @@
-# Muestreo Aleatorio Estratificado
