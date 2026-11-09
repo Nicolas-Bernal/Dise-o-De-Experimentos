@@ -87,13 +87,13 @@ sample(x,8, replace=TRUE) # se genera una muestra de tamaño 8 con reemplazo
 
 Generalmente el parámetro más importante a estimar en una población es su media. Veamos algunos ejemplos.
 
-![image.png](MAS%20sin%20remplazo/image%201.png)
+![image.png](../../../imagenes/image%201.png)
 
 ### Notacion
 
-![image.png](MAS%20sin%20remplazo/image%202.png)
+![image.png](../../../imagenes/image%202.png)
 
-![image.png](MAS%20sin%20remplazo/image%203.png)
+![image.png](../../../imagenes/image%203.png)
 
 En $\hat{Y}$ al factor $\frac{N}{n}$ que multiplica al total muestral, se le llama factor de expansión, elevación o inflación.
 
@@ -105,18 +105,18 @@ En el MAS sin reemplazo,
 
 - La media muestral definida como $\bar{y}=\frac{1}{n}\sum_{i=1}^{n}y_i$ es un estimador insesgado de la media poblacional $\bar{Y}$.
 - La varianza muestral $s^2=\frac{\sum_{i=1}^{n}(y_i-\bar{y})^2}{n-1}$, es un estimador insesgado de la varianza poblacional finita, $S^2$.
-- La varianza de la media muestral es $\operatorname{Var}(\bar{y})=\left(1-\frac{n}{N}\right)\frac{S^2}{n}$.
-- El error estándar de estimación de la media muestral es $\operatorname{EE}(\bar{y})=\sqrt{\left(1-\frac{n}{N}\right)\frac{S^2}{n}}$.
+- La varianza de la media muestral es $\mathrm{Var}(\bar{y})=\left(1-\frac{n}{N}\right)\frac{S^2}{n}$.
+- El error estándar de estimación de la media muestral es $\mathrm{EE}(\bar{y})=\sqrt{\left(1-\frac{n}{N}\right)\frac{S^2}{n}}$.
 
-Los estimadores de $\operatorname{Var}(\bar{y})$ y el $\operatorname{EE}(\bar{y})$ se obtienen reemplazando $S^2$ y $S$ por sus respectivos estimadores $s^2$ y $s$, siendo el estimador de la varianza un estimador insesgado.
+Los estimadores de $\mathrm{Var}(\bar{y})$ y el $\mathrm{EE}(\bar{y})$ se obtienen reemplazando $S^2$ y $S$ por sus respectivos estimadores $s^2$ y $s$, siendo el estimador de la varianza un estimador insesgado.
 
 $$
-\widehat{\operatorname{Var}}(\bar{y})=\left(1-\frac{n}{N}\right)\frac{s^2}{n},\qquad \widehat{\operatorname{EE}}(\bar{y})=\sqrt{\left(1-\frac{n}{N}\right)\frac{s^2}{n}}.
+\widehat{\mathrm{Var}}(\bar{y})=\left(1-\frac{n}{N}\right)\frac{s^2}{n},\qquad \widehat{\mathrm{EE}}(\bar{y})=\sqrt{\left(1-\frac{n}{N}\right)\frac{s^2}{n}}.
 $$
 
 Existen situaciones donde el objetivo es estimar el total de los valores de una variable. Veamos algunos ejemplos.
 
-![image.png](MAS%20sin%20remplazo/image%204.png)
+![image.png](../../../imagenes/image%204.png)
 
 ## Total poblacional MAS
 
@@ -131,24 +131,24 @@ donde $\frac{N}{n}$ es el factor de expansión y $\sum_{i=1}^{n}y_i$ es el total
 - La varianza y el error estándar del estimador del total $\hat{Y}$ pueden deducirse de la varianza de la media:
 
 $$
-\operatorname{Var}(\hat{Y})=N^2\operatorname{Var}(\bar{y})=\left(1-\frac{n}{N}\right)\frac{N^2S^2}{n}=\frac{N(N-n)S^2}{n},
+\mathrm{Var}(\hat{Y})=N^2\mathrm{Var}(\bar{y})=\left(1-\frac{n}{N}\right)\frac{N^2S^2}{n}=\frac{N(N-n)S^2}{n},
 $$
 
 $$
-\operatorname{EE}(\hat{Y})=N\operatorname{EE}(\bar{y})=N\sqrt{\left(1-\frac{n}{N}\right)\frac{S^2}{n}}.
+\mathrm{EE}(\hat{Y})=N\mathrm{EE}(\bar{y})=N\sqrt{\left(1-\frac{n}{N}\right)\frac{S^2}{n}}.
 $$
 
-Como estimadores de $\operatorname{Var}(\hat{Y})$ y $\operatorname{EE}(\hat{Y})$, se definen:
+Como estimadores de $\mathrm{Var}(\hat{Y})$ y $\mathrm{EE}(\hat{Y})$, se definen:
 
 $$
-\widehat{\operatorname{Var}}(\hat{Y})=\frac{N(N-n)s^2}{n},\qquad \widehat{\operatorname{EE}}(\hat{Y})=N\sqrt{\left(1-\frac{n}{N}\right)\frac{s^2}{n}}.
+\widehat{\mathrm{Var}}(\hat{Y})=\frac{N(N-n)s^2}{n},\qquad \widehat{\mathrm{EE}}(\hat{Y})=N\sqrt{\left(1-\frac{n}{N}\right)\frac{s^2}{n}}.
 $$
 
 El estimador de la varianza del estimador total es insesgado, al igual que en el caso de la media.
 
 En el caso de la media y total poblacionales, los intervalos de confianza se construyen generalmente haciendo uso de la distribución normal.
 
-![image.png](MAS%20sin%20remplazo/image%205.png)
+![image.png](../../../imagenes/image%205.png)
 
 Algunas ideas:
 
@@ -170,13 +170,13 @@ Algunas ideas:
 Teniendo en cuenta esto, se pueden establecer intervalos de confianza aproximados del $100(1-\alpha)\%$ para la media y el total de poblaciones en el MAS sin reemplazo, como sigue,
 
 $$
-\bar{y}\pm t_{n-1,\,1-\alpha/2}\,\operatorname{EE}(\bar{y})
+\bar{y}\pm t_{n-1,\,1-\alpha/2}\,\mathrm{EE}(\bar{y})
 $$
 
 y,
 
 $$
-\hat{Y}\pm t_{n-1,\,1-\alpha/2}\,\operatorname{EE}(\hat{Y})
+\hat{Y}\pm t_{n-1,\,1-\alpha/2}\,\mathrm{EE}(\hat{Y})
 $$
 
 donde $t_{n-1,\,1-\alpha/2}$ es el percentil $100(1-\alpha/2)\%$ de la distribución $t$ con $n-1$ grados de libertad.
@@ -196,51 +196,51 @@ donde $a$ es el número de elementos en la muestra con el atributo deseado.
 - La varianza y el error estándar de estimación de la proporción muestral están dado por:
 
 $$
-\operatorname{Var}(p)=\frac{N-n}{N-1}\frac{PQ}{n}
+\mathrm{Var}(p)=\frac{N-n}{N-1}\frac{PQ}{n}
 $$
 
 $$
-\operatorname{EE}(p)=\sqrt{\frac{N-n}{N-1}\frac{PQ}{n}}
+\mathrm{EE}(p)=\sqrt{\frac{N-n}{N-1}\frac{PQ}{n}}
 $$
 
 Con estimadores
 
 $$
-\widehat{\operatorname{Var}}(p)=\frac{N-n}{N}\frac{pq}{n-1},\qquad \widehat{\operatorname{EE}}(p)=\sqrt{\frac{N-n}{N}\frac{pq}{n-1}}
+\widehat{\mathrm{Var}}(p)=\frac{N-n}{N}\frac{pq}{n-1},\qquad \widehat{\mathrm{EE}}(p)=\sqrt{\frac{N-n}{N}\frac{pq}{n-1}}
 $$
 
-donde $\widehat{\operatorname{Var}}(p)$ es un estimador insesgado de $\operatorname{Var}(p)$.
+donde $\widehat{\mathrm{Var}}(p)$ es un estimador insesgado de $\mathrm{Var}(p)$.
 
 La varianza y el error estándar del estimador del total de unidades con la característica, son:
 
 $$
-\operatorname{Var}(\hat{A})=N^2\frac{N-n}{N-1}\frac{PQ}{n}
+\mathrm{Var}(\hat{A})=N^2\frac{N-n}{N-1}\frac{PQ}{n}
 $$
 
 $$
-\operatorname{EE}(\hat{A})=N\sqrt{\frac{N-n}{N-1}\frac{PQ}{n}}
+\mathrm{EE}(\hat{A})=N\sqrt{\frac{N-n}{N-1}\frac{PQ}{n}}
 $$
 
 Teniendo como estimadores de estos parámetros:
 
 $$
-\widehat{\operatorname{Var}}(\hat{A})=N(N-n)\frac{pq}{n-1}
+\widehat{\mathrm{Var}}(\hat{A})=N(N-n)\frac{pq}{n-1}
 $$
 
 $$
-\widehat{\operatorname{EE}}(\hat{A})=N\sqrt{\frac{N-n}{N}\frac{pq}{n-1}}
+\widehat{\mathrm{EE}}(\hat{A})=N\sqrt{\frac{N-n}{N}\frac{pq}{n-1}}
 $$
 
 Si se cumple el requisito anterior, los límites de confianza para la proporción poblacional y para el número de elementos con el atributo deseado, estarán dados por:
 
 $$
-p\pm t_{n-1,\,1-\alpha/2}\,\widehat{\operatorname{EE}}(p)
+p\pm t_{n-1,\,1-\alpha/2}\,\widehat{\mathrm{EE}}(p)
 $$
 
 y,
 
 $$
-\hat{A}\pm t_{n-1,\,1-\alpha/2}\,\widehat{\operatorname{EE}}(\hat{A})
+\hat{A}\pm t_{n-1,\,1-\alpha/2}\,\widehat{\mathrm{EE}}(\hat{A})
 $$
 
 Cuando el tamaño de muestra no cumple el límite mínimo establecido, los intervalos construidos con la distribución normal no son muy buenos (límites inferiores negativos o superiores mayores que 1). En estos casos se hace necesario hacer uso ya sea de la distribución hipergeométrica o de la distribución binomial
@@ -249,12 +249,12 @@ Cuando el tamaño de muestra no cumple el límite mínimo establecido, los inter
 
 ### a) Media muestral y b) estimación del total poblacional
 
-![image.png](MAS%20sin%20remplazo/image%206.png)
+![image.png](../../../imagenes/image%206.png)
 
 ### c) Proporción muestral y total de familias con niños
 
-![image.png](MAS%20sin%20remplazo/image%207.png)
+![image.png](../../../imagenes/image%207.png)
 
-![image.png](MAS%20sin%20remplazo/image%208.png)
+![image.png](../../../imagenes/image%208.png)
 
-![image.png](MAS%20sin%20remplazo/image%209.png)
+![image.png](../../../imagenes/image%209.png)
